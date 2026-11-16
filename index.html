@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+  adhesive.loc.cc 落地页 - 用于通过 NodeLoc / Yunamo 健康检查
+  使用方法：
+  1. 在 GitHub 新建仓库，例如 adhesive-loc-cc
+  2. 把这个文件改名为 index.html 上传到仓库根目录（如果下载下来名字不同）
+  3. 仓库 Settings > Pages > Source 选 main 分支 / root，保存
+  4. 等 1-2 分钟，访问 https://你的GitHub用户名.github.io/adhesive-loc-cc/ 能打开即成功
+  5. 回到 Yunamo 域名管理，给 adhesive.loc.cc 添加解析：
+     - 如果用 GitHub Pages 自定义域名：在仓库根目录再加一个 CNAME 文件，内容只写 adhesive.loc.cc
+       然后 DNS 添加 A 记录 @ -> 185.199.108.153 / 185.199.109.153 / 185.199.110.153 / 185.199.111.153
+     - 最省事保活法：@ 的 A 记录直接指向你的 GitHub Pages，或用 URL 转发到上面的 github.io 地址
+  关键：@ 记录最终要能以 https 打开且证书有效，连续 30 天打不开会被收回，光改 NS 不够。
+-->
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>adhesive.loc.cc</title>
+<meta name="description" content="adhesive.loc.cc - site is live">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;background:#0f172a;color:#e2e8f0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.card{max-width:640px;width:100%;text-align:center;background:#1e293b;border:1px solid #334155;border-radius:20px;padding:48px 32px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#064e3b;color:#6ee7b7;border:1px solid #065f46;padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:22px}
+.dot{width:8px;height:8px;background:#34d399;border-radius:50%;box-shadow:0 0 0 4px rgba(52,211,153,.2)}
+h1{font-size:42px;letter-spacing:-.02em;color:#f8fafc;word-break:break-all;line-height:1.1}
+h1 span{color:#38bdf8}
+p{margin-top:16px;line-height:1.7;color:#94a3b8;font-size:16px}
+.hello{font-size:20px;color:#cbd5e1;font-weight:600;margin-top:8px}
+hr{border:none;border-top:1px solid #334155;margin:28px 0}
+.meta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;font-size:13px;color:#94a3b8}
+.meta span{background:#0f172a;border:1px solid #334155;padding:8px 12px;border-radius:10px}
+footer{margin-top:24px;font-size:13px;color:#64748b}
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="badge"><span class="dot"></span> 网站正常运行中 · Site is live</div>
+  <h1>adhesive<span>.loc.cc</span></h1>
+  <p class="hello">你好，这里是 adhesive.loc.cc</p>
+  <p>这个页面已经成功上线，用于保持域名健康检查通过。<br>This landing page is online and reachable over HTTPS.</p>
+  <hr>
+  <div class="meta">
+    <span>✅ HTTPS 可访问</span>
+    <span>✅ 健康检查保活页</span>
+    <span>Hosted on GitHub Pages</span>
+  </div>
+  <footer>adhesive.loc.cc · 2026</footer>
+</main>
+</body>
+</html>
